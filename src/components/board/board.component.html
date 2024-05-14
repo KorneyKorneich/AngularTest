@@ -1,0 +1,24 @@
+<div class="board-container">
+    <div class="currency-name">Currency RUB</div>
+    <div>{{timestamp}}</div>
+    <div class="currency-list">
+        @if(currencyData?.quotes) {
+            @for(item of currencyItemList; track item) {
+                <app-currency-item
+                    [currencyName]="item[0]"
+                    [currencyPrice]="item[1]"
+                    [currencyDiff]="item[2]"
+                ></app-currency-item>
+            }
+        }
+    </div>
+
+    <div class="dropdown" >
+        <button (click)="toggleDropdown()" class="dropbtn">Выберите валюту</button>
+        <div [hidden]="hideDropdown" class="dropdown-content">
+            <a (click)="addCurrency('CNY')">CNY</a>
+            <a (click)="addCurrency('JPY')">JPY</a>
+            <a (click)="addCurrency('TRY')">TRY</a>
+        </div>
+    </div>
+</div>

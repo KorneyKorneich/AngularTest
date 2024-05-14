@@ -1,0 +1,33 @@
+.currency-item {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+.currency-item:last-child {
+    margin-bottom: 0;
+}
+
+.currency-item:hover {
+    transform: translateY(-5px);
+}
+
+.currency-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.currency-name {
+    font-weight: bold;
+}
+
+.currency-value {
+    font-size: 1.2em;
+}
+
+.currency-change {
+    color: #888;
+}
